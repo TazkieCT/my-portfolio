@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useSettings } from "../context/SettingsContext"
 
 interface SettingsModalProps {
   isOpen: boolean
@@ -8,48 +8,7 @@ interface SettingsModalProps {
 }
 
 export default function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-  const [isCustomCursor, setIsCustomCursor] = useState(false)
-
-  useEffect(() => {
-    const savedDarkMode = localStorage.getItem("darkMode") === "true"
-    const savedCustomCursor = localStorage.getItem("customCursor") === "true"
-
-    setIsDarkMode(savedDarkMode)
-    setIsCustomCursor(savedCustomCursor)
-
-    if (savedDarkMode) {
-      document.documentElement.classList.add("dark")
-    }
-
-    if (savedCustomCursor) {
-      document.body.style.cursor = "crosshair"
-    }
-  }, [])
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !isDarkMode
-    setIsDarkMode(newDarkMode)
-    localStorage.setItem("darkMode", newDarkMode.toString())
-
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }
-
-  const toggleCustomCursor = () => {
-    const newCustomCursor = !isCustomCursor
-    setIsCustomCursor(newCustomCursor)
-    localStorage.setItem("customCursor", newCustomCursor.toString())
-
-    if (newCustomCursor) {
-      document.body.style.cursor = "crosshair"
-    } else {
-      document.body.style.cursor = "default"
-    }
-  }
+  const { isDarkMode, isCustomCursor, toggleDarkMode, toggleCustomCursor } = useSettings()
 
   if (!isOpen) return null
 
@@ -106,7 +65,7 @@ export default function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-medium text-gray-900 dark:text-white">Custom Cursor</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Enable custom cursor</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Enable smooth custom cursor</p>
             </div>
             <button
               onClick={toggleCustomCursor}

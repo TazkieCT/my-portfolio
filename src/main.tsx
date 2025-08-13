@@ -6,18 +6,21 @@ import "./index.css";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
+import { SettingsProvider } from "./context/SettingsContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        {/* Layout jadi pembungkus */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="project" element={<Project />} />
-          <Route path="contact" element={<Project />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <SettingsProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Layout jadi pembungkus */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="project" element={<Project />} />
+            <Route path="contact" element={<Project />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </SettingsProvider>
   </StrictMode>
 );
