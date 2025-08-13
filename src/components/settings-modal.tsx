@@ -1,6 +1,7 @@
 "use client"
 
 import { useSettings } from "../context/SettingsContext"
+import { DarkModeToggle } from "./dark-mode-toggle"
 
 interface SettingsModalProps {
   isOpen: boolean
@@ -60,6 +61,7 @@ export default function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
               />
             </button>
           </div>
+          {/* <DarkModeToggle /> */}
 
           {/* Custom Cursor Toggle */}
           <div className="flex items-center justify-between">

@@ -1,5 +1,4 @@
 import { HyperText } from "../components/magicui/hyper-text";
-import { DarkModeToggle } from "../components/dark-mode-toggle";
 
 export default function Home() {
   return (
