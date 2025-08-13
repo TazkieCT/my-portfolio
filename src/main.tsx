@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="project" element={<Project />} />
-            <Route path="contact" element={<Project />} />
+            <Route path="experience" element={<Project />} />
           </Route>
         </Routes>
       </BrowserRouter>

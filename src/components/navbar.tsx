@@ -4,11 +4,11 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Project", href: "/project" },
-    { name: "Contact", href: "/contact" },
+    { name: "Experience", href: "/contact" },
   ];
 
   return (
-    <nav className="w-full py-6 px-4">
+    <nav className="w-full py-6 px-4 z-4">
       <div className="max-w-4xl mx-auto">
         <ul className="flex items-center justify-center gap-12">
           {navItems.map((item) => {

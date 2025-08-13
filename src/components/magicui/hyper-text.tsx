@@ -35,7 +35,7 @@ const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 export function HyperText({
   children,
   className,
-  duration = 1500,
+  duration = 500,
   delay = 0,
   as: Component = "div",
   startOnView = false,

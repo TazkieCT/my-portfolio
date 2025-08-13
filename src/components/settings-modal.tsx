@@ -1,7 +1,6 @@
 "use client"
 
 import { useSettings } from "../context/SettingsContext"
-import { DarkModeToggle } from "./dark-mode-toggle"
 
 interface SettingsModalProps {
   isOpen: boolean
