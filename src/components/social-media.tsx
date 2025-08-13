@@ -6,7 +6,7 @@ export default function SocialMedia() {
           href="https://github.com/TazkieCT"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 text-gray-500 hover:text-black transition-all duration-200 hover:scale-110 transform"
+          className="p-3 text-gray-500 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-110 transform"
           aria-label="GitHub"
         >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -18,7 +18,7 @@ export default function SocialMedia() {
           href="https://www.instagram.com/ijtct/"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 text-gray-500 hover:text-black transition-all duration-200 hover:scale-110 transform"
+          className="p-3 text-gray-500 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-110 transform"
           aria-label="Instagram"
         >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ export default function SocialMedia() {
           href="https://www.linkedin.com/in/ijtct/"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 text-gray-500 hover:text-black transition-all duration-200 hover:scale-110 transform"
+          className="p-3 text-gray-500 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-110 transform"
           aria-label="LinkedIn"
         >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

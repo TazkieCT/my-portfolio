@@ -19,13 +19,13 @@ export default function Navbar() {
                   href={item.href}
                   className={`text-lg font-medium transition-colors duration-200 relative group ${
                     isActive
-                      ? "text-black"
-                      : "text-gray-500 hover:text-black"
+                      ? "text-black dark:text-white"
+                      : "text-gray-500 hover:text-black dark:hover:text-white"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-black transition-all duration-200 ${
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-black dark:bg-white transition-all duration-200 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>

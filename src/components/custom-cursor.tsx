@@ -80,7 +80,7 @@ export default function SmoothCursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-6 h-6 rounded-full border border-black pointer-events-none z-[9999] transition-transform duration-200 ease-out"
+      className="fixed top-0 left-0 w-6 h-6 rounded-full border border-black dark:border-white pointer-events-none z-[9999] transition-transform duration-200 ease-out"
     />
   );
 }

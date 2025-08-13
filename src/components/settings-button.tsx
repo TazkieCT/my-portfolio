@@ -11,7 +11,7 @@ export default function SettingsButton() {
       <div className="fixed right-6 top-10 -translate-y-1/2 z-50">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="p-3 text-gray-500 hover:text-black transition-all duration-200 hover:scale-110 transform"
+          className="p-3 text-gray-500 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-110 transform"
           aria-label="Open settings"
         >
           <svg

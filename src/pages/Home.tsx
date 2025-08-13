@@ -1,12 +1,13 @@
 import { HyperText } from "../components/magicui/hyper-text";
+import { DarkModeToggle } from "../components/dark-mode-toggle";
 
 export default function Home() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 min-h-screen flex flex-col items-center justify-center">
-      <HyperText className="text-4xl font-bold text-center text-gray-900">
+      <HyperText className="text-4xl font-bold text-center text-gray-900 dark:text-white">
         Hello 👋 I'm Tazkie
       </HyperText>
-      <p className="text-lg text-gray-600 text-center mt-4">
+      <p className="text-lg text-gray-600 dark:text-gray-300 text-center mt-4">
         On my journey to grow as a mobile & web developer.
       </p>
     </main>
