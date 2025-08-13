@@ -1,37 +1,40 @@
 export default function Navbar() {
+  const currentPath = window.location.pathname;
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Project", href: "/project" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
     <nav className="w-full py-6 px-4">
       <div className="max-w-4xl mx-auto">
         <ul className="flex items-center justify-center gap-12">
-          <li>
-            <a
-              href="/"
-              className="text-lg font-medium text-gray-500 hover:text-black transition-colors duration-200 relative group"
-            >
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/project"
-              className="text-lg font-medium text-gray-500 hover:text-black transition-colors duration-200 relative group"
-            >
-              Project
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact"
-              className="text-lg font-medium text-gray-500 hover:text-black transition-colors duration-200 relative group"
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
-            </a>
-          </li>
+          {navItems.map((item) => {
+            const isActive = currentPath === item.href;
+            return (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className={`text-lg font-medium transition-colors duration-200 relative group ${
+                    isActive
+                      ? "text-black"
+                      : "text-gray-500 hover:text-black"
+                  }`}
+                >
+                  {item.name}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-black transition-all duration-200 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
-  )
+  );
 }
