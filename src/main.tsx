@@ -7,6 +7,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import { SettingsProvider } from "./context/SettingsContext";
+import Experience from "./pages/Experience";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="project" element={<Project />} />
-            <Route path="experience" element={<Project />} />
+            <Route path="experience" element={<Experience />} />
           </Route>
         </Routes>
       </BrowserRouter>
